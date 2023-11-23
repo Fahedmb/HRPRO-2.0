@@ -7,25 +7,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "project")
+public class Project {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long projectId;
     private String name;
-    private String lastName;
-    private String email;
-    private String password;
-    private int age;
+    private String description;
     private LocalDateTime createdAt;
-    private String role;
+    private float budget;
 
-    public void setId(Long userId) {
-    }
 }

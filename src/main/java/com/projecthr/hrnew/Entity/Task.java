@@ -13,19 +13,18 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "task")
+public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long taskId;
     private String name;
-    private String lastName;
-    private String email;
-    private String password;
-    private int age;
-    private LocalDateTime createdAt;
-    private String role;
+    private String description;
+    private int complexity;
+    private int priotity;
+    private LocalDateTime starting_time;
+    private LocalDateTime finishing_time;
 
-    public void setId(Long userId) {
+    public static void setId(Long taskId) {
     }
 }
