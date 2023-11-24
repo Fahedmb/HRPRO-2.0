@@ -1,27 +1,30 @@
 package com.projecthr.hrnew.Entity;
 
-import com.projecthr.hrnew.Entity.Enum.Department_Name;
+import com.projecthr.hrnew.Entity.Enum.Request_type;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "department")
-public class Department {
+@Table(name = "request")
+public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long departmentId;
+    private Long requestId;
     @Enumerated(EnumType.STRING)
-    private Department_Name name;
-    private String city;
+    private Request_type type;
+    private String name;
     private String description;
+    private LocalDateTime Submitted_at;
 
-    public static void setId(Long departmentId) {
+    public static void setId(Long requestId) {
     }
 }

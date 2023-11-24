@@ -1,11 +1,11 @@
 package com.projecthr.hrnew.Entity;
 
+import com.projecthr.hrnew.Entity.Enum.Vacation_Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
@@ -24,7 +24,7 @@ public class Vacation {
     private LocalDateTime Starting_date;
     private LocalDateTime Finishing_date;
     @Enumerated(EnumType.STRING)
-    private Status Vacation_Status;
+    private Vacation_Status vacation_status;
 
     public static void setId(Long vacationId) {
     }

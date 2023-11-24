@@ -1,4 +1,4 @@
-package com.projecthr.hrnew.Entity;
+package com.projecthr.hrnew.Entity.Enum;
 
 public enum Department_Name {
     FINANCE,

@@ -1,5 +1,6 @@
 package com.projecthr.hrnew.Entity;
 
+import com.projecthr.hrnew.Entity.Enum.User_Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,7 +25,8 @@ public class User {
     private String password;
     private int age;
     private LocalDateTime createdAt;
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private User_Role role;
 
     public void setId(Long userId) {
     }
