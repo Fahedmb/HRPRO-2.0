@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "vacation")
 public class Vacation {
+    //Users can request vacations.
+    //Vacation requests are either granted or designed by the HR.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long vacationId;
@@ -25,6 +27,9 @@ public class Vacation {
     private LocalDateTime Finishing_date;
     @Enumerated(EnumType.STRING)
     private Vacation_Status vacation_status;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public static void setId(Long vacationId) {
     }

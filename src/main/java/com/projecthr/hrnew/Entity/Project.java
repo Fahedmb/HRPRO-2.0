@@ -26,5 +26,9 @@ public class Project {
     private String description;
     private LocalDateTime createdAt;
     private float budget;
+    @OneToMany(mappedBy = "project")
+    private List<Team> teams;
+    @ManyToMany(mappedBy = "projects")
+    private Set<Department> departments = new LinkedHashSet<>();
 
 }

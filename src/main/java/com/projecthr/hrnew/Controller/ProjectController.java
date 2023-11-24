@@ -1,9 +1,7 @@
 package com.projecthr.hrnew.Controller;
 
 import com.projecthr.hrnew.Entity.Project;
-import com.projecthr.hrnew.Entity.User;
 import com.projecthr.hrnew.Service.ProjectService;
-import com.projecthr.hrnew.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
