@@ -1,10 +1,11 @@
 package com.projecthr.hrnew.Entity.Enum;
 
-public enum User_Role {
+public enum ERole {
     ADMIN,
     TEAMLEADER,
     HUMANRECAURCE,
     EMPLOYEE,
     CLIENT,
-    MAINTENANCEAGENT
+    MAINTENANCEAGENT,
+    USER
 }
